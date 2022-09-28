@@ -1,9 +1,17 @@
 import './App.css';
 
+import NavBar from './components/navbar';
+import Hero from './components/hero';
+import Products from './components/products';
+import Footer from './components/footer';
+
 function App() {
 	return (
 		<div className="App">
-			<h1>Intial</h1>
+			<NavBar />
+			<Hero />
+			<Products />
+			<Footer />
 		</div>
 	);
 }
