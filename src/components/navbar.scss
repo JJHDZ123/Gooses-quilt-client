@@ -1,0 +1,93 @@
+.app_navbar {
+    width: 100%;
+    max-height: 3rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 1rem;
+    background: rgba(255,255,255, .25);
+    border: 1px solid (255,255,255, 0.18);
+    z-index: 2;
+}
+
+h1 {
+    margin: 0;
+
+    @media screen and (max-width: 900px) {
+        font-size: 1.5rem;
+    }
+    @media screen and (max-width: 375px) {
+        font-size: 1rem;
+    }
+}
+
+.app__navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    list-style: none;
+
+    li {
+        margin: 0 .5rem;
+        cursor: pointer;
+
+        flex: column;
+
+        div{
+            width: 10px;
+            height: 1px;
+            background: transparent;
+        }
+
+        a {
+            color: var(--gray-color);
+            text-decoration: none;
+            flex-direction: column;
+
+            text-transform: uppercase;
+            font-weight: 500;
+
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: var(--secondary-color);
+            }
+        }
+
+        &:hover {
+            div {
+                background: var(--secondary-color);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
+        @media screen and (min-width: 2000px) {
+            padding: 0 1rem;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        display: none;
+    }
+}
+
+.app_navbar-burgir {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: gray;
+
+    @media screen and (min-width: 900px) {
+        display: none;
+    }
+}

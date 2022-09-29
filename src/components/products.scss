@@ -1,0 +1,10 @@
+.app_products {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: cornflowerblue;
+
+    scroll-snap-align: start;
+}
