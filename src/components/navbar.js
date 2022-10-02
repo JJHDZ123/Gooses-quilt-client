@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react';
 
+import Logo from '../assets/logo.png';
 import './navbar.scss';
 
 const NavBar = () => {
@@ -14,7 +15,9 @@ const NavBar = () => {
 	return (
 		<Fragment>
 			<div className="app_navbar">
-				<h1>Goose & Squirrel</h1>
+				<div className="navbar-logo">
+					<img src={Logo} alt="logo" />
+				</div>
 				<ul className="app__navbar-links">
 					{[ 'home', 'products', 'about' ].map((item) => {
 						return (

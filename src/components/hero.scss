@@ -1,9 +1,20 @@
 .app_hero {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
-    background: salmon;
-    scroll-snap-align: start;
+.hero_picture-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    object-fit: cover;
+    z-index: -10;
+    img{
+        flex-shrink: 0;
+        width: 100%;
+    }
 }
