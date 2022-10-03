@@ -1,0 +1,58 @@
+.app_home {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.35)), url('../assets/hero.jpg') no-repeat center / cover;
+
+    .hero_info-container{
+        width: 50%;
+        height: 50%;
+        
+        .hero-title{
+            padding-bottom: 3rem;
+        }
+        .hero-sub{
+            padding-bottom: 2rem;
+        }
+        .hero-btn{
+            background: purple;
+            color: white;
+            border:none;
+            border-radius: 10px;
+            padding: .75rem 1.25rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.homeCards-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.contact_me-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}

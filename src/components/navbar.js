@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import Logo from '../assets/logo.png';
 import './navbar.scss';
@@ -16,13 +17,17 @@ const NavBar = () => {
 		<Fragment>
 			<div className="app_navbar">
 				<div className="navbar-logo">
-					<img src={Logo} alt="logo" />
+					<Link to={'/home'}>
+						<img src={Logo} alt="logo" />
+					</Link>
 				</div>
 				<ul className="app__navbar-links">
 					{[ 'home', 'products', 'about' ].map((item) => {
 						return (
 							<li className="app__flex p-text" key={`link-${item}`}>
-								<a href={`#${item}`}>{item}</a>
+								<Link className="navbar-links" to={`/${item}`}>
+									{item}
+								</Link>
 							</li>
 						);
 					})}
@@ -39,7 +44,7 @@ const NavBar = () => {
 							{[ 'home', 'products', 'about' ].map((item) => {
 								return (
 									<li className="app__flex p-text" key={`link-${item}`}>
-										<a href={`#${item}`}>{item}</a>
+										<Link to={`/${item}`}>{item}</Link>
 									</li>
 								);
 							})}
