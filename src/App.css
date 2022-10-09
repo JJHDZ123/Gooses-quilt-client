@@ -1,9 +1,19 @@
 .App {
   text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background-image: url("./assets/gooseback.png");
 }
 
 .app_bodyWrapper{
   display: flex;
   flex-direction: column;
+  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
   min-height: calc(100vh - 5rem);
+  width: 75%;
+  margin-top: 4rem;
 }

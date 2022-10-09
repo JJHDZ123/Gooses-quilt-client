@@ -9,7 +9,9 @@ const HomeCard = (props) => {
 			<div className="homeCard_img-container">
 				<img src={props.imageUrl} />
 			</div>
-			<h2>{props.name}</h2>
+			<div className="app_homeCard-text">
+				<h2>{props.name}</h2>
+			</div>
 		</div>
 	);
 };
