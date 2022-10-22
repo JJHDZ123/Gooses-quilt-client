@@ -42,7 +42,7 @@
 }
 
 .homeCards-container{
-    background: white;
+    background: #f8f9fa;
     width: 100%;
     height: 500px;
     display: flex;
@@ -51,11 +51,15 @@
     padding: 2rem 0;
 }
 
+.homescreen__products{
+    height: 100vh;
+    background: white;
+}
+
 .contact_me-container{
     background: #f8f9fa;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 100vh;
 }

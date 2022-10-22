@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 import NavBar from './components/navbar';
+import ScrollButton from './components/scrollButton';
 import Footer from './components/footer';
 
 import HomeScreen from './pages/homeScreen';
@@ -14,12 +15,11 @@ function App() {
 				<div className="app_bodyWrapper">
 					<NavBar />
 					<Routes>
-						<Route exact path="/" element={<Navigate to="/home" />} />
-						<Route exact path="/home" element={<HomeScreen />} />
-						<Route exact path="/products" element={<ProductsScreen />} />
-						<Route exact path="/products" element={<ProductsScreen />} />
+						<Route exact path="/" element={<HomeScreen />} />
+						<Route exact path="/product" element={<ProductsScreen />} />
 					</Routes>
 				</div>
+				<ScrollButton />
 				<Footer />
 			</Router>
 		</div>
