@@ -1,17 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 import './homeScreen.scss';
 import data from '../constants/constants.js';
+import prodData from '../constants/products.js';
 
 import HomeCard from '../components/homeCard';
 import Product from '../components/product';
 
 const HomeScreen = () => {
-	const [ products, setProducts ] = useState({ loading: true });
-
-	useEffect(() => {}, []);
+	const [ products, setProducts ] = useState(prodData);
 
 	return (
 		<div id="home" className="app_home">
@@ -38,22 +36,19 @@ const HomeScreen = () => {
 			</div>
 			<div id="products" className="homescreen__products">
 				<h2 className="homescreen__title"> Latest Products</h2>
-				{products.loading ? (
-					<h2>Loading...</h2>
-				) : (
-					products.map((product) => {
+				<div className="products-continer">
+					{products.map((product) => {
 						return (
 							<Product
-								key={product._id}
-								productId={product._id}
+								key={product.name}
 								name={product.name}
 								price={product.price}
-								description={product.description}
-								imageUrl={product.imageUrl}
+								imageUrl={product.productImageUrl}
+								productUrl={product.productUrl}
 							/>
 						);
-					})
-				)}
+					})}
+				</div>
 			</div>
 			<div id="contact" className="contact_me-container">
 				<div className="home-socials">

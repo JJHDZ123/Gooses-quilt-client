@@ -1,5 +1,4 @@
 import React from 'react';
-import productsScreen from '../pages/productsScreen';
 
 import './homeCard.scss';
 
@@ -7,7 +6,7 @@ const HomeCard = (props) => {
 	return (
 		<div className="app_homeCard">
 			<div className="homeCard_img-container">
-				<img src={props.imageUrl} />
+				<img src={props.imageUrl} alt="This is used as filler for the homecard" />
 			</div>
 			<div className="app_homeCard-text">
 				<h2>{props.name}</h2>
